@@ -1,0 +1,207 @@
+:root {
+	font-size: 16px; 
+	/*This sets the font-size all over the document. Default: 16px;
+	You can set all other value relative to this value. I mean, this is the easiest way to 
+	changing a whole complex object with changing one value. See bottom the @media block.*/
+}
+
+body, html { 
+    margin: 0;
+    padding: 0;
+    /* Must both parameters set when vertical scrollbar appears with min-height: 100vh. */
+}
+
+body {
+	background-color: 	hsl(210, 46%, 95%);
+	font-family: 'Manrope', sans-serif;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	align-items: center; 
+  	justify-content: center; 
+  	height: 100vh;
+}
+
+#div-head-left {
+	width: 17.875rem;
+	height: 17.5rem;
+	border-radius: 0.5rem 0 0 0.5rem;
+	background-image: url(./images/drawers.jpg);
+	background-size: cover;
+}
+
+#div-head {
+	width: 27.875rem;
+	height: 17.5rem;
+	background-color: 	hsl(0, 0%, 100%);
+	border-radius: 0 0.5rem 0.5rem 0;
+	position: relative;
+}
+
+h1 {
+	color: hsl(217, 19%, 35%);
+	margin: 2rem 2.5rem 0;
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+#p-ever {
+	font-size: 0.85rem;
+	margin: 1rem 2.5rem 0;
+	color: hsl(214, 17%, 51%);
+	font-weight: 500;
+}
+
+#img-michelle {
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+}
+
+#div-lower {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.4rem 2rem 0;
+}
+
+#div-left {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#p-name {
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: hsl(217, 19%, 35%);
+	margin: 0 0.9rem;
+}
+
+#p-date {
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: hsl(214, 17%, 51%);
+	margin: 0 0.9rem;
+}
+
+#div-michelle {
+	display: flex;
+	flex-direction: column;
+}
+
+#div-right {
+	width: 2rem;
+	height: 2rem;
+	background-color: hsl(210, 46%, 95%);
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	z-index: 10;
+}
+
+#div-right:hover {
+	cursor: pointer;
+}
+
+#div-share {
+	width: 15.5rem;
+	height: 3.375rem;
+	background-color: hsl(214, 17%, 51%);
+	border-radius: 0.5rem;
+	color: hsl(0, 0%, 100%);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: -4.375rem;
+	bottom: 6rem;
+	visibility: hidden;
+}
+
+#div-share img {
+	width: 1.25rem;
+	height: 1.25rem;
+	margin: 0.5rem;
+}
+
+#div-share p {
+	margin: 0 0.5rem;
+	font-size: 0.8rem;
+	letter-spacing: 3px;
+}
+
+#div-rotate {
+	width: 1rem;
+	height: 1rem;
+	background-color: hsl(214, 17%, 51%);
+	rotate: 45deg;
+	position: absolute;
+	right: 3rem;
+	bottom: 5.5rem;
+	visibility: hidden;
+}
+
+#img-facebook:hover, #img-twitter, #img-pinterest {
+	cursor: pointer;
+}
+
+@media (max-width: 750px) {
+
+	main {
+		flex-direction: column;
+	}
+
+	#div-head-left {
+		width: 20.5rem;
+		height: 12.5rem;
+		border-radius: 0.4375rem 0.4375rem 0 0;
+		background-size: 100% 120%;
+	}
+
+	#div-head {
+		width: 20.5rem;
+		height: 19.625rem;
+		border-radius: 0 0 0.4375rem 0.4375rem;
+	}
+
+	h1 {
+		margin: 2.5rem 2rem 0;
+		font-size: 1rem;
+		font-weight: 700;
+	}
+
+	#p-ever {
+		font-size: 0.84rem;
+		margin: 1rem 2rem 0;
+		line-height: 150%;
+	}
+
+	#div-lower {
+		margin: 2.425rem 2rem 0;
+	}
+
+	#div-share {
+		height: 4rem;
+		width: 20.5rem;
+		border-radius: 0 0 0.4375rem 0.4375rem;
+		left: 0;
+		bottom: 0;
+		justify-content: flex-start;
+	}
+
+	#div-rotate {
+		opacity: 0;
+	}
+
+	#div-share p {
+		margin: 0 0.5rem 0 2rem;
+	}
+}
